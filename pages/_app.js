@@ -1,5 +1,5 @@
 import React, {memo} from "react";
-import '../styles/tailwind.css'
+import "../styles/tailwind.css";
 import { Provider } from "react-redux";
 import {store} from "0.lib/context/store";
 import Page from "Page";

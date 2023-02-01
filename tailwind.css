@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
+@tailwind variants;
+
+@layer base {
+    html,body{
+        @apply h-full;
+    }
+    body{
+        @apply flex flex-col;
+    }
+    div{
+        @apply flex flex-col;
+    }
+    [multiple],
+    [type=date],
+    [type=datetime-local],
+    [type=email],
+    [type=month],
+    [type=number],
+    [type=password],
+    [type=search],
+    [type=tel],
+    [type=text],
+    [type=time],
+    [type=url],
+    [type=week],
+    select,
+    textarea {
+        /*appearance: inherit;*/
+        background-color: inherit;
+        border-color: inherit;
+        border-width: inherit;
+        border-radius: inherit;
+        padding: 16.5px 14px;
+        font-size: initial;
+        line-height: inherit;
+    }
+
+    [multiple]:-webkit-autofill,
+    [type=date]:-webkit-autofill,
+    [type=datetime-local]:-webkit-autofill,
+    [type=email]:-webkit-autofill,
+    [type=month]:-webkit-autofill,
+    [type=number]:-webkit-autofill,
+    [type=password]:-webkit-autofill,
+    [type=search]:-webkit-autofill,
+    [type=tel]:-webkit-autofill,
+    [type=text]:-webkit-autofill,
+    [type=time]:-webkit-autofill,
+    [type=url]:-webkit-autofill,
+    [type=week]:-webkit-autofill,
+    select:-webkit-autofill,
+    textarea:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 100px #F1F5F9 inset;
+        -webkit-text-fill-color: #011627;
+        caret-color: #011627;
+        border-radius: inherit;
+    }
+
+    .dark [multiple]:-webkit-autofill,
+    .dark [type=date]:-webkit-autofill,
+    .dark [type=datetime-local]:-webkit-autofill,
+    .dark [type=email]:-webkit-autofill,
+    .dark [type=month]:-webkit-autofill,
+    .dark [type=number]:-webkit-autofill,
+    .dark [type=password]:-webkit-autofill,
+    .dark [type=search]:-webkit-autofill,
+    .dark [type=tel]:-webkit-autofill,
+    .dark [type=text]:-webkit-autofill,
+    .dark [type=time]:-webkit-autofill,
+    .dark [type=url]:-webkit-autofill,
+    .dark [type=week]:-webkit-autofill,
+    .dark select:-webkit-autofill,
+    .dark textarea:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 100px #011627 inset;
+        -webkit-text-fill-color: #F1F5F9;
+        caret-color: #F1F5F9;
+        border-radius: 0;
+    }
+    span,p,h3, div{
+        @apply cursor-default;
+    }
+}

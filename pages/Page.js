@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import { ThemeProvider } from "@material-tailwind/react";
 import Loader from "0.lib/Loader";
 import Login from "auth/login";
+import {permission} from "0.lib/data/permission";
 
 const Page = ({children }) => {
 
@@ -35,7 +36,6 @@ const Page = ({children }) => {
             <ThemeProvider value={site?.theme || "light"}>
                 {!loaded && <Loader /> || children}
             </ThemeProvider>
-            {children}
         </React.Fragment>
     )
 }
