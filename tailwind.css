@@ -84,3 +84,7 @@
         @apply cursor-default;
     }
 }
+/***/
+.circle-dashed-border{
+    @apply rounded-full border-[0.043rem] border-dashed border-white;
+}

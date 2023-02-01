@@ -23,14 +23,14 @@ const Home = () => {
                     <Typography
                         variant={"h1"}
                         color={"white"}
-                        className={"text-[4.769rem] font-bold"}
+                        className={"md:text-7xl text-2xl font-bold"}
                     >
                         Explore Türkiye
                     </Typography>
                     <Typography
                         variant={"h1"}
                         color={"white"}
-                        className={"text-[3.179rem] font-bold -translate-y-6"}
+                        className={"md:text-5xl text-xl font-bold "}
                     >
                         & Save in best places!
                     </Typography>
