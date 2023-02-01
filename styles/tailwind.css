@@ -43,7 +43,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -587,6 +587,7 @@ select {
 
 html,body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -820,6 +821,10 @@ span,p,h3, div {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .top-4 {
   top: 1rem;
 }
@@ -904,6 +909,18 @@ span,p,h3, div {
   top: -0.5rem;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
+.-bottom-1\/2 {
+  bottom: -50%;
+}
+
+.top-full {
+  top: 100%;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -985,6 +1002,10 @@ span,p,h3, div {
 
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 .block {
@@ -1082,6 +1103,14 @@ span,p,h3, div {
 
 .h-11 {
   height: 2.75rem;
+}
+
+.h-\[42\.25rem\] {
+  height: 42.25rem;
+}
+
+.h-20 {
+  height: 5rem;
 }
 
 .max-h-\[100vh\] {
@@ -1187,6 +1216,10 @@ span,p,h3, div {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .min-w-\[25\%\] {
@@ -1298,6 +1331,31 @@ span,p,h3, div {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-6 {
+  --tw-translate-y: -1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/2 {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-4 {
+  --tw-translate-y: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-8 {
+  --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-12 {
+  --tw-translate-y: -3rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-0 {
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1305,6 +1363,12 @@ span,p,h3, div {
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1360,6 +1424,10 @@ span,p,h3, div {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -1460,6 +1528,10 @@ span,p,h3, div {
 
 .rounded-\[7px\] {
   border-radius: 7px;
+}
+
+.rounded-\[50\%\] {
+  border-radius: 50%;
 }
 
 .border {
@@ -1736,6 +1808,10 @@ span,p,h3, div {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
+.bg-istanbul-mosque {
+  background-image: url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png);
+}
+
 .from-gray-600 {
   --tw-gradient-from: #4b5563;
   --tw-gradient-to: rgb(75 85 99 / 0);
@@ -1866,6 +1942,10 @@ span,p,h3, div {
   --tw-gradient-to: #f87171;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-clip-border {
   background-clip: border-box;
 }
@@ -1873,6 +1953,14 @@ span,p,h3, div {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .object-cover {
@@ -1975,6 +2063,11 @@ span,p,h3, div {
   padding-right: 1px;
 }
 
+.px-\[6\.313rem\] {
+  padding-left: 6.313rem;
+  padding-right: 6.313rem;
+}
+
 .pt-0\.5 {
   padding-top: 0.125rem;
 }
@@ -2023,6 +2116,14 @@ span,p,h3, div {
   padding-bottom: 0.25rem;
 }
 
+.pt-\[15\.438rem\] {
+  padding-top: 15.438rem;
+}
+
+.pl-\[6\.313rem\] {
+  padding-left: 6.313rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2040,7 +2141,7 @@ span,p,h3, div {
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-xl {
@@ -2085,6 +2186,14 @@ span,p,h3, div {
 
 .text-\[11px\] {
   font-size: 11px;
+}
+
+.text-\[4\.769rem\] {
+  font-size: 4.769rem;
+}
+
+.text-\[3\.179rem\] {
+  font-size: 3.179rem;
 }
 
 .font-semibold {

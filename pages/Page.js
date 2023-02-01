@@ -10,6 +10,7 @@ import { initReactI18next } from "react-i18next";
 import detector from "i18next-browser-languagedetector";
 import {resources} from "0.lib/data/language";
 import Header from "0.lib/Header";
+import Footer from "0.lib/Footer";
 
 const Page = ({children }) => {
 
@@ -56,6 +57,7 @@ const Page = ({children }) => {
             <ThemeProvider value={site?.theme || "light"}>
                 <Header />
                 {!loaded && <Loader /> || children}
+                {/*<Footer />*/}
             </ThemeProvider>
         </React.Fragment>
     )

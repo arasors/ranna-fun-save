@@ -1,8 +1,10 @@
 import React, {memo} from "react";
 import {useTranslation} from "react-i18next";
-import {Button} from "@material-tailwind/react";
+import {Button, Typography} from "@material-tailwind/react";
 import {useSelector} from "react-redux";
 import {updateSite} from "0.lib/context/actions/siteAction";
+import classNames from "classnames";
+import Image from "next/image";
 
 const Home = () => {
 
@@ -10,14 +12,30 @@ const Home = () => {
     const site = useSelector(state => state?.site);
 
     return(
-        <div className={"items-start"}>
-            {t("title")}
+        <div className={"items-start w-full"}>
 
-            <Button variant={"gradient"} onClick={() => updateSite({language: site?.language==="tr-TR" ? "en-US" : "tr-TR"})}>
-                <span>
-                    Dil: {site?.language}
-                </span>
-            </Button>
+            <div
+                className={classNames({
+                    "h-[42.25rem] w-full pt-[15.438rem] pl-[6.313rem]": true,
+                    "bg-istanbul-mosque bg-cover bg-bottom bg-no-repeat": true
+                })}
+                 id="slider">
+                    <Typography
+                        variant={"h1"}
+                        color={"white"}
+                        className={"text-[4.769rem] font-bold"}
+                    >
+                        Explore Türkiye
+                    </Typography>
+                    <Typography
+                        variant={"h1"}
+                        color={"white"}
+                        className={"text-[3.179rem] font-bold -translate-y-6"}
+                    >
+                        & Save in best places!
+                    </Typography>
+            </div>
+
         </div>
     )
 }

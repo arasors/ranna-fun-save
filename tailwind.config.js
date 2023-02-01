@@ -159,7 +159,8 @@ module.exports = withMT({
       'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-      "diamond-gradient": "linear-gradient(0deg, #5962E4, #5962E4), #1A93DA;"
+      "diamond-gradient": "linear-gradient(0deg, #5962E4, #5962E4), #1A93DA;",
+      "istanbul-mosque": "url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png)"
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
     backgroundPosition: {
@@ -374,6 +375,7 @@ module.exports = withMT({
     },
     fontFamily: {
       sans: [
+          'Poppins',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
