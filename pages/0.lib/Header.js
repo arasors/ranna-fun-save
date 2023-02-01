@@ -15,19 +15,21 @@ const Header = () => {
         <nav id="header" className={classNames({
             "py-2 h-20 w-full relative": true,
             "flex-row flex justify-between": true,
-            "sticky top-0 bg-white": true
+            "sticky top-0 bg-white z-10": true
         })}>
            <div className={classNames({
                "container mx-auto relative": true,
-               "flex-row flex justify-between": true,
+               "flex-row flex justify-center md:justify-between": true,
            })}>
-               <div id="logo">
+               <div id="logo" className={"md:inline-flex hidden"}>
                    <Link href={"/"}>
                        <Image src={require("/public/logo.svg")?.default} alt={"Logo"} />
                    </Link>
                </div>
 
-               <div className="menu z-10 flex-row items-center translate-y-2">
+               <div
+                   id="desktop"
+                    className="menu z-10 flex-row items-center translate-y-2 md:inline-flex hidden">
                    {!user?.isLogin ? (
                        <React.Fragment>
                            {header?.menu?.map((item, key) => (
@@ -91,12 +93,40 @@ const Header = () => {
                        </React.Fragment>
                    )}
                </div>
+
+
+               <div
+                    id="mobile"
+                   className="navbar md:hidden w-full">
+                   <div className="container nav-container">
+                       <input className="checkbox" type="checkbox" name="" id=""/>
+                       <div className="hamburger-lines">
+                           <span className="line line1"></span>
+                           <span className="line line2"></span>
+                           <span className="line line3"></span>
+                       </div>
+                       <div id="logo" className={"logo flex-1 pr-12 items-center justify-center"}>
+                           <Link href={"/"}>
+                               <Image src={require("/public/logo.svg")?.default} alt={"Logo"} />
+                           </Link>
+                       </div>
+                       <div className="menu-items">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">about</a></li>
+                           <li><a href="#">blogs</a></li>
+                           <li><a href="#">portfolio</a></li>
+                           <li><a href="#">contact</a></li>
+                       </div>
+                   </div>
+               </div>
+
            </div>
             <div
                 id="bg-circ"
                 className={classNames({
                     "absolute right-0 top-full -translate-y-12  box-border w-1/3 h-16": true,
                     "rounded-[50%] bg-white pointer-events-none select-none": true,
+                    "md:inline-flex hidden": true
                 })}
             />
         </nav>

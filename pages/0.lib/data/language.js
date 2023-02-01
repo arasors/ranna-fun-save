@@ -5,7 +5,15 @@ export const resources = {
             "lng": "Dil",
             "register": "Yeni üyelik",
             "login": "Giriş yap",
-            "buynow": "Satın Al!"
+            "buynow": "Satın Al!",
+            "settings": "Ayarlar",
+            "about-us": "Hakkımızda",
+            "terms-of-use": "Şartlar ve Koşullar",
+            "privacy-policy": "Gizlilik Politikamız",
+            "contact": "İletişim",
+            "become-partner": "Become a partner",
+            "slider-text-1": "Explore Türkiye",
+            "slider-text-2": "& Save in best places!"
         }
     },
     en: {
@@ -14,7 +22,15 @@ export const resources = {
             "lng": "Language",
             "register": "Sign Up",
             "login": "Login",
-            "buynow": "Buy Now!"
+            "buynow": "Buy Now!",
+            "settings": "Settings",
+            "about-us": "About us",
+            "terms-of-use": "Terms of use",
+            "privacy-policy": "Privacy Policy",
+            "contact": "Contact",
+            "become-partner": "Become a partner",
+            "slider-text-1": "Explore Turkey",
+            "slider-text-2": "& Save in best places!"
         }
     }
 }

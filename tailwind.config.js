@@ -51,7 +51,6 @@ module.exports = withMT({
       silver: "#8F8D8D",
       gold: "#E0A93F",
       diamond: "#1A93DA"
-
     }),
     columns: {
       auto: 'auto',
