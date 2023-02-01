@@ -1,12 +1,19 @@
+import React, {memo} from "react";
 import '../styles/tailwind.css'
-import { ThemeProvider } from "@material-tailwind/react";
+import { Provider } from "react-redux";
+import {store} from "0.lib/context/store";
+import Page from "Page";
 
 function MyApp({ Component, pageProps }) {
   return(
-      <ThemeProvider value={}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <React.StrictMode>
+          <Provider store={store}>
+              <Page {...pageProps}>
+                  <Component {...pageProps} />
+              </Page>
+          </Provider>
+      </React.StrictMode>
   )
 }
 
-export default MyApp
+export default memo(MyApp);

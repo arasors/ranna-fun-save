@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "pages"
+  },
+  "include": [
+    "pages"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "out"
+  ]
+}
