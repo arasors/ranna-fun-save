@@ -4,7 +4,12 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./pages/**/*.{js,ts,jsx,tsx}"],
   presets: [],
-  darkMode: 'media', // or 'class'
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp')
+  ],
+  darkMode: 'class', // or 'class'
   theme: {
     screens: {
       sm: '640px',
@@ -968,6 +973,5 @@ module.exports = withMT({
     'focus-visible',
     'active',
     'disabled',
-  ],
-  plugins: [],
+  ]
 })
