@@ -5,6 +5,7 @@ export const resources = {
             "lng": "Dil",
             "register": "Yeni üyelik",
             "login": "Giriş yap",
+            "buynow": "Satın Al!"
         }
     },
     en: {
@@ -13,6 +14,7 @@ export const resources = {
             "lng": "Language",
             "register": "Sign Up",
             "login": "Login",
+            "buynow": "Buy Now!"
         }
     }
 }

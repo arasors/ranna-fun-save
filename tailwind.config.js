@@ -50,6 +50,7 @@ module.exports = withMT({
       primary: "#00A79D",
       silver: "#8F8D8D",
       gold: "#E0A93F",
+      diamond: "#1A93DA"
 
     }),
     columns: {
@@ -159,7 +160,7 @@ module.exports = withMT({
       'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-      "diamond-gradient": "linear-gradient(0deg, #5962E4, #5962E4), #1A93DA;",
+      "diamond-gradient": "linear-gradient(0deg, #5962E4, #5962E4)",
       "istanbul-mosque": "url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png)"
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
