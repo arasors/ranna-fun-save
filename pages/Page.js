@@ -9,6 +9,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import detector from "i18next-browser-languagedetector";
 import {resources} from "0.lib/data/language";
+import Header from "0.lib/Header";
 
 const Page = ({children }) => {
 
@@ -53,6 +54,7 @@ const Page = ({children }) => {
     return(
         <React.Fragment>
             <ThemeProvider value={site?.theme || "light"}>
+                <Header />
                 {!loaded && <Loader /> || children}
             </ThemeProvider>
         </React.Fragment>
