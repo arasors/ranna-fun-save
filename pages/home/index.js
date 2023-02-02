@@ -1,6 +1,6 @@
 import React, {memo, useState, useCallback, useMemo} from "react";
 import {useTranslation} from "react-i18next";
-import {Button, Typography} from "@material-tailwind/react";
+import {Button, IconButton, Typography} from "@material-tailwind/react";
 import {useSelector} from "react-redux";
 import classNames from "classnames";
 import {ReactSVG} from "react-svg";
@@ -124,7 +124,8 @@ const Home = () => {
                 className={classNames({
                     "flex-row gap-x-4 container max-w-screen-lg mx-auto justify-between items-center py-2": true,
                     "rounded-xl border border-solid border-gray-300": true,
-                    "divide-x divide-solid divide-gray-300": true
+                    "divide-x divide-solid divide-gray-300": true,
+                    "shadow shadow-lg shadow-slate-300": true
                 })}
                 id="categories">
                 {categories.map((item,key) => (
@@ -150,6 +151,19 @@ const Home = () => {
                         </Button>
                     ))
                 }
+            </div>
+
+            <div className={classNames({
+                "mt-8 container mx-auto w-full": true
+            })}>
+                <div className="flex-row justify-between items-center w-full">
+                    <h3 className={classNames({
+                        "py-3 text-3xl capitalize": true
+                    })}>{categories?.find((i,k) => k===category)?.title}</h3>
+                    <IconButton variant={"gradient"} color={"white"} className={"rounded-full text-sm p-1"}>
+                        <ReactSVG src={"icons/settings.svg"} alt={"ico"} className={"text-primary scale-90"} />
+                    </IconButton>
+                </div>
             </div>
 
         </div>
