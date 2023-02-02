@@ -160,7 +160,12 @@ module.exports = withMT({
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
       "diamond-gradient": "linear-gradient(0deg, #5962E4, #5962E4)",
-      "istanbul-mosque": "url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png)"
+      "gold-gradient": "linear-gradient(270deg, #935800 -0.09%, #FFD852 99.91%)",
+      "silver-gradient": "linear-gradient(270deg, #676767 -0.09%, #9F9F9F 6.16%, #AFAFAF 99.91%) ",
+      "istanbul-mosque": "url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png)",
+      "pr-pattern": "url(../public/images/home/pr-pattern.png)",
+      "enthusiastic-joyful": "url(../public/images/home/enthusiastic-joyful.png)",
+      "card1-bg": "url(../public/images/home/card1-bg.png)"
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
     backgroundPosition: {

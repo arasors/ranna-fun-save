@@ -15,7 +15,15 @@ export const resources = {
             "slider-text-1": "Explore Türkiye",
             "slider-text-2": "& Save in best places!",
             "membership": "üyelik",
-            "see-all": "Hepsini gör"
+            "see-all": "Hepsini gör",
+            "credit-card-banner-title": "Üyeliğinizi Seçin ve Biriktirmeye Başlayın",
+            "credit-card-banner-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "diamond-member": "Elmas Üye",
+            "diamond-expired-time-text": "3 Ay Limitli",
+            "gold-member": "Altın Üye",
+            "gold-expired-time-text": "3 Ay Limitli",
+            "silver-member": "Gümüş Üye",
+            "silver-expired-time-text": "3 Ay Limitli"
         }
     },
     en: {
@@ -34,7 +42,15 @@ export const resources = {
             "slider-text-1": "Explore Turkey",
             "slider-text-2": "& Save in best places!",
             "membership": "membership",
-            "see-all": "See all"
+            "see-all": "See all",
+            "credit-card-banner-title": "Choose Your Membership & Start Saving",
+            "credit-card-banner-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "diamond-member": "Elmas Üye",
+            "diamond-expired-time-text": "3 Months Limited",
+            "gold-member": "Gold Member",
+            "gold-expired-time-text": "3 Months Limited",
+            "silver-member": "Silver Member",
+            "silver-expired-time-text": "3 Months Limited"
         }
     }
 }

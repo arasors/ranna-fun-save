@@ -227,6 +227,100 @@ const Home = () => {
                     </Link>
                 </div>
 
+
+
+            </div>
+
+            <div className={classNames({
+                "w-full py-8": true,
+                "bg-pr-pattern relative overflow-hidden": true
+            })}>
+                <div className={classNames({
+                    "absolute top-12 left-1/2 h-full w-[48%]": true,
+                    "bg-enthusiastic-joyful bg-right bg-contain bg-no-repeat": true
+                })}></div>
+                <div className="container mx-auto py-8 w-full text-white flex-row">
+                    <div className={"flex-1"}>
+                        <h3 className={"text-3xl font-bold mt-14 pt-14"}>{t("credit-card-banner-title")}</h3>
+                        <p className="py-8">{t("credit-card-banner-text")}</p>
+
+
+
+
+                        <div className={"flex-row gap-x-2"}>
+
+                            {["diamond","gold","silver"].map((item,key) => (
+                                <div className={`card ${item}`} key={key}>
+                                    <div className="card__info">
+                                        <div className="card__logo">
+                                            <Image src={require("/public/logo-white.svg")} alt={t("title")} className={"w-32"} />
+                                            <div className={"flex-row gap-x-1 items-center pr-3"}>
+                                                <div className="h-10 w-0.5 rounded mx-2 bg-white"></div>
+                                                <span>{t(`${item}-expired-time-text`)}</span>
+                                            </div>
+                                        </div>
+                                        {/*<div className="card__chip">*/}
+                                        {/*    <svg className="card__chip-Lines" role="Img" width="40px" height="40px" viewBox="0 0 200 200" aria-label="chip">*/}
+                                        {/*        <g opacity="0.8">*/}
+                                        {/*            <polyline points="0,50 35,50" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="0,20 20,20 35,35" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="50,0 50,35" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="65,35 80,20 100,20" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="100,50 65,50" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="35,35 65,35 65,65 35,65 35,35" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="0,80 20,80 35,65" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="50,100 50,65" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*            <polyline points="65,65 80,80 100,80" fill="none" stroke="#000" strokeWidth="4" />*/}
+                                        {/*        </g>*/}
+                                        {/*    </svg>*/}
+                                        {/*    <div className="card__chip-Texture"></div>*/}
+                                        {/*</div>*/}
+                                        <div className="card__name" aria-label={`${item}-member`}>{t(`${item}-member`)}</div>
+
+                                        <div className="card__number">
+                                            <span className="card__digit-group">0000</span>
+                                            <span className="card__digit-group">0021</span>
+                                            <span className="card__digit-group">4748</span>
+                                            <span className="card__digit-group">3647</span>
+                                        </div>
+                                        {/*<div className="card__vendor" role="Img" aria-labelledby="card-Vendor">*/}
+                                        {/*    <span id="card-Vendor" className="card__vendor-Sr">Mastercard</span>*/}
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className="card__type">
+                                        <div className="circle_card__type">
+                                            {/*<Image src={require("/public/icons/dinner.svg")?.default} alt={"Dinner"} />*/}
+                                            {/*<Image src={require("/public/icons/photo.svg")?.default} alt={"Photo"} />*/}
+                                            {/*<Image src={require("/public/icons/basket.svg")?.default} alt={"Basket"} />*/}
+                                            {/*<Image src={require("/public/icons/health.svg")?.default} alt={"Health"} />*/}
+
+                                            <div className="text-wrapper">
+                                                <span>A</span>
+                                                <span>B</span>
+                                                {(item==="gold" || item==="diamond") && (
+                                                    <span>C</span>
+                                                )}
+                                                {item==="diamond" && (
+                                                    <span>D</span>
+                                                )}
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div className="card__texture"></div>
+                                    <div className="card__texture2" hue={223}></div>
+                                </div>
+                            ))}
+
+                        </div>
+
+
+
+                    </div>
+                    <div className={"flex-1"} />
+
+                </div>
             </div>
 
         </div>
