@@ -14,7 +14,8 @@ export const resources = {
             "become-partner": "Become a partner",
             "slider-text-1": "Explore Türkiye",
             "slider-text-2": "& Save in best places!",
-            "membership": "üyelik"
+            "membership": "üyelik",
+            "see-all": "Hepsini gör"
         }
     },
     en: {
@@ -32,7 +33,8 @@ export const resources = {
             "become-partner": "Become a partner",
             "slider-text-1": "Explore Turkey",
             "slider-text-2": "& Save in best places!",
-            "membership": "membership"
+            "membership": "membership",
+            "see-all": "See all"
         }
     }
 }

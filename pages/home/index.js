@@ -4,6 +4,9 @@ import {Button, IconButton, Typography} from "@material-tailwind/react";
 import {useSelector} from "react-redux";
 import classNames from "classnames";
 import {ReactSVG} from "react-svg";
+import Image from "next/image";
+import Link from "next/link";
+import {FaAngleRight, TfiAngleRight} from "react-icons/all";
 
 const Home = () => {
 
@@ -55,6 +58,35 @@ const Home = () => {
             }
         ];
     }, [category, tab]);
+
+    const categoriesList = useMemo(() => {
+        return [
+            {
+                title: "Restaurant 1",
+                image: require("/public/images/home/dining/Rectangle 31-1.png")
+            },
+            {
+                title: "Restaurant 2",
+                image: require("/public/images/home/dining/Rectangle 31-2.png")
+            },
+            {
+                title: "Restaurant 3",
+                image: require("/public/images/home/dining/Rectangle 31-3.png")
+            },
+            {
+                title: "Restaurant 4",
+                image: require("/public/images/home/dining/Rectangle 31-4.png")
+            },
+            {
+                title: "Restaurant 5",
+                image: require("/public/images/home/dining/Rectangle 31-5.png")
+            },
+            {
+                title: "Restaurant 6",
+                image: require("/public/images/home/dining/Rectangle 31.png")
+            }
+        ];
+    }, []);
 
     return(
         <div className={"items-start w-full"}>
@@ -122,7 +154,7 @@ const Home = () => {
 
             <div
                 className={classNames({
-                    "flex-row gap-x-4 container max-w-screen-lg mx-auto justify-between items-center py-2": true,
+                    "flex-row gap-x-4 container max-w-screen-lg mx-auto justify-between items-center": true,
                     "rounded-xl border border-solid border-gray-300": true,
                     "divide-x divide-solid divide-gray-300": true,
                     "shadow shadow-lg shadow-slate-300": true
@@ -164,6 +196,37 @@ const Home = () => {
                         <ReactSVG src={"icons/settings.svg"} alt={"ico"} className={"text-primary scale-90"} />
                     </IconButton>
                 </div>
+
+                {[{i:0,k:2},{i:2,k:4},{i:4,k:6}].map((i,k) => (
+                    <div className="flex-row w-full gap-8" key={k}>
+                        {categoriesList?.slice(i?.i,i?.k).map((item,key) => (
+                            <div className={"flex-col flex-1 items-center"} key={key}>
+                                <div className={classNames({
+                                    "flex-1 my-2 rounded-xl h-44 overflow-hidden": true,
+                                    "w-full": true
+                                })}>
+                                    <Image src={item?.image} alt={item?.title} className={"h-full w-full object-cover"} />
+                                </div>
+                                <span className={"pb-3 text-lg font-medium"}>{item?.title}</span>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+
+                <div className="flex-row justify-end items-end w-full">
+                    <Link href={"/"} className={classNames({
+                        "text-slate-900 text-lg py-4 font-bold flex flex-row justify-between items-center gap-x-0 hover:gap-x-5 group": true,
+                        "transition-all ease-in-out hover:opacity-90": true
+                    })}>
+                        {t("see-all")}
+
+                        <FaAngleRight className={classNames({
+                            "group-hover:opacity-100 opacity-0": true,
+                            "transition-all ease-in-out hover:opacity-90": true
+                        })} />
+                    </Link>
+                </div>
+
             </div>
 
         </div>
