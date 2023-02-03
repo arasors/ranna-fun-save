@@ -321,7 +321,7 @@
     @apply flex-row justify-between;
 }
 .card__logo span{
-    @apply text-lg;
+    @apply md:text-lg text-sm whitespace-nowrap;
 }
 .card__chip {
     background-image: linear-gradient(hsl(0,0%,70%),hsl(0,0%,80%));
@@ -342,7 +342,7 @@
     width: calc(7.5em/2);
     height: calc(7.5em/2);
     @apply rounded-full bg-white/20;
-    @apply absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10;
+    @apply absolute right-1 top-1/2 -translate-y-1/2 translate-x-1/2 z-10;
 }
 .circle_card__type{
     font-family: 'ranna categories ico';
@@ -352,7 +352,7 @@
     @apply scale-75 h-full items-center justify-center translate-x-5;
 }
 .circle_card__type .text-wrapper span{
-    @apply leading-10 text-3xl;
+    @apply md:leading-10 md:text-3xl leading-6 text-xl;
 }
 
 
@@ -364,7 +364,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @apply text-2xl font-bold z-10;
+    @apply md:text-2xl text-base font-bold z-10;
     /*font-family: "courier prime", monospace;*/
     /*filter: drop-shadow(0 0.05rem hsla(0,0%,0%,0.3));*/
 }
@@ -387,7 +387,7 @@
 }
 .card__exp-date,
 .card__name {
-    @apply text-3xl z-10 font-sans;
+    @apply md:text-3xl text-xl z-10 font-sans;
 }
 .card__exp-date {
     padding-left: 0.25rem;
