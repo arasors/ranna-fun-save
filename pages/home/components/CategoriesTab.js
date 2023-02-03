@@ -58,7 +58,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
     return(
         <React.Fragment>
             <div className={classNames({
-                "flex-row md:gap-x-4 gap-x-1 justify-center container max-w-screen-md mx-auto": true,
+                "flex-row md:gap-x-4 gap-x-1 justify-center container md:max-w-screen-md max-w-screen-sm mx-auto": true,
                 "-translate-y-1/2 -mt-1/2": true
             })}>
 
@@ -68,17 +68,17 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
                         color={item==="silver" ? "gray" : item==="gold" ? "amber" : "indigo"}
                         className={classNames(({
                             "flex flex-col": true,
-                            "md:py-8 py-1 flex-1 rounded-xl text-white font-medium": true,
+                            "md:py-8 py-1 flex-1 px-2 md:px-8 rounded-xl text-white font-medium": true,
                             "transition-all ease-in-out": true,
-                            "scale-90 opacity-90": tab!==key,
-                            "scale-105": tab===key
+                            "scale-[.9] opacity-90": tab!==key,
+                            "scale-[0.8]": tab===key
                         }))} key={key} onClick={() => {
                         tabOnChange(key)
                         categoryOnChange(categories[0])
                     }
                     }>
-                        <span className={"text-xl md:text-2xl cursor-pointer"}>{item?.toUpperCase()}</span>
-                        <span className={"pb-4 capitalize text-base cursor-pointer"}>{t("membership")}</span>
+                        <span className={"text-xl md:text-2xl capitalize cursor-pointer"}>{item}</span>
+                        <span className={"pb-4 capitalize md:text-base text-sm cursor-pointer"}>{t("membership")}</span>
                     </Button>
                 ))}
 
@@ -86,7 +86,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
 
             <div
                 className={classNames({
-                    "flex-row gap-x-4 container max-w-screen-lg mx-auto justify-between items-center": true,
+                    "flex-row flex-nowrap gap-x-4 container max-w-screen-lg mx-auto justify-between items-center": true,
                     "rounded-xl border border-solid border-gray-300": true,
                     "divide-x divide-solid divide-gray-300": true,
                     "shadow shadow-lg shadow-slate-300": true
@@ -99,7 +99,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
                                     : tab===2 ? "indigo" : "white"
                             : "white"
                     } className={classNames({
-                        "flex flex-row gap-x-2 px-6 items-center flex-1": true,
+                        "flex flex-row gap-x-2 px-6 items-center flex-1 shadow-none border-0": true,
                         "text-gray-400":( (tab===0 && key>1) || (tab===1 && key>2)) && category?.type!==item?.type,
                         "text-gray-600": tab===0,
                         "text-white": category?.type===item?.type

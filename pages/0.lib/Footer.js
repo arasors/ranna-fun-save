@@ -26,7 +26,7 @@ const Footer = () => {
                     "flex-row w-full justify-between": true
                 })}>
                     <div className={classNames({
-                        "flex-1 flex-row gap-x-8": true
+                        "flex-1 flex-row gap-x-12": true
                     })}>
                         {footer && footer?.map((item,key) => (
                             <Link href={item?.href} key={key}>
