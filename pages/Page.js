@@ -1,7 +1,7 @@
 import React, {memo, useState, useEffect, useMemo} from "react";
 import {useRouter} from "next/router";
 import {useSelector} from "react-redux";
-import { ThemeProvider } from "@material-tailwind/react";
+import { ThemeProvider as TWThemeProvider } from "@material-tailwind/react";
 import Loader from "0.lib/Loader";
 import Login from "auth/login";
 import {permission} from "0.lib/data/permission";
@@ -11,6 +11,7 @@ import detector from "i18next-browser-languagedetector";
 import {resources} from "0.lib/data/language";
 import Header from "0.lib/Header";
 import Footer from "0.lib/Footer";
+
 
 const Page = ({children }) => {
 
@@ -52,14 +53,28 @@ const Page = ({children }) => {
         return Object.values(checkData).every(item => item===true);
     },[router.pathname]);
 
+    // const theme = useMemo(
+    //     () =>
+    //         createTheme({
+    //             palette: {
+    //                 mode: site?.theme || 'light',
+    //                 primary: {
+    //                     main: "#00A79D"
+    //                 },
+    //                 secondary :{
+    //                     main: "#ED1C24"
+    //                 }
+    //             },
+    //         }), [site?.theme]);
+
     return(
-        <React.Fragment>
-            <ThemeProvider value={site?.theme || "light"}>
-                <Header />
-                {!loaded && <Loader /> || children}
-                {checkFooterVisible && <Footer />}
-            </ThemeProvider>
-        </React.Fragment>
+        <React.StrictMode>
+            <TWThemeProvider value={"light" || site?.theme}>
+                <Header/>
+                {!loaded && <Loader/> || children}
+                {checkFooterVisible && <Footer/>}
+            </TWThemeProvider>
+        </React.StrictMode>
     )
 }
 

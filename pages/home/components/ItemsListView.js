@@ -4,7 +4,7 @@ import {IconButton} from "@material-tailwind/react";
 import {ReactSVG} from "react-svg";
 import Image from "next/image";
 import Link from "next/link";
-import {FaAngleRight} from "react-icons/all";
+import {FaAngleRight} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
 import {categoriesData} from "0.lib/data/categories";
 

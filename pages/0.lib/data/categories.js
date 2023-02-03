@@ -1,27 +1,49 @@
+export const tabs = [
+    {
+        title: "silver",
+        content: [1,2],
+        color: "gray"
+    },
+    {
+        title: "gold",
+        content: [1,2,3],
+        color: "amber"
+    },
+    {
+        title: "diamond",
+        content: [1,2,3,4],
+        color: "indigo"
+    }
+];
+
 export const categories = [
     {
+        id: 1,
         title: "Dining",
         pageTitle: "Dining",
         type: "dining",
-        ico: "icons/dinner.svg"
+        ico: "A"
     },
     {
+        id: 2,
         title: "Attractions",
         pageTitle: "Tourist Attractions",
         type: "attractions",
-        ico: "icons/photo.svg"
+        ico: "B"
     },
     {
+        id: 3,
         title: "Shopping",
         pageTitle: "Shopping",
         type: "shopping",
-        ico: "icons/basket.svg"
+        ico: "C"
     },
     {
+        id: 4,
         title: "Health",
         pageTitle: "Health",
         type: "health",
-        ico: "icons/health.svg"
+        ico: "D"
     }
 ];
 

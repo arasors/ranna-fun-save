@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import {ReactSVG} from "react-svg";
-import {FaUserAlt} from "react-icons/all";
+import {FaUserAlt} from "react-icons/fa";
 
 export const header = {
     login: [

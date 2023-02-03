@@ -408,6 +408,9 @@ module.exports = withMT({
         '"Courier New"',
         'monospace',
       ],
+      rannaIcons: [
+          "ranna categories ico"
+      ]
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
