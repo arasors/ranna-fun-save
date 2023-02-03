@@ -1,6 +1,7 @@
 import React, {memo, useCallback, useEffect, useState} from "react";
 import classNames from "classnames";
-import {Button, Tabs, TabsHeader, TabsBody, Tab, TabPanel} from "@material-tailwind/react";
+import {Button} from "@material-tailwind/react";
+import { Tab } from "@headlessui/react";
 import {useTranslation} from "react-i18next";
 import {categories, tabs} from "0.lib/data/categories";
 import {ReactSVG} from "react-svg";
@@ -51,47 +52,56 @@ const CategoriesTab = () => {
                     "container max-w-screen-lg mx-auto": true,
                 })}>
 
-                {category && <Tabs
-                    value={category?.type}
-                    id={"categories"}
-                    className={"w-full"}
-                    variant="scrollable"
-                    scrollButtons={true}
-                    allowScrollButtonsMobile={true}
-                    onChange={(c) => {
-                        // setCategory(c)
-                        console.log(c)
-                    }}
+                {category && <Tab.Group
+                    selectedIndex={categories?.findIndex((i,k) => i?.id===category?.id)}
+                    onChange={(val) => setCategory(categories?.find((i,k) => k===val))}
                 >
 
-                    <TabsHeader className={"w-full"} color={"amber"}>
+                    <Tab.List className={classNames({
+                        "md:w-full w-[98%] p-1 flex-row gap-x-4": true,
+                        "border border-solid border-gray-300 mx-1 rounded-xl": true,
+                        "overflow-x-auto scrollbar-st sc-hide": true
+                    })}>
                         {categories && categories.map((item,key) => (
                             <Tab
                                 key={key}
                                 value={item?.type}
                                  disabled={!tab?.content?.includes(item?.id)}
+                                className={({ selected }) =>
+                                    classNames({
+                                        'w-full rounded-lg py-2.5 px-3 text-sm font-medium leading-5': true,
+                                        "text-gray-400": !tab?.content?.includes(item?.id),
+                                        "text-white": tab?.content?.includes(item?.id) && selected,
+                                        "text-slate-900": tab?.content?.includes(item?.id) && !selected,
+                                        "bg-silver-gradient": tab?.color==="gray" && tab?.content?.includes(item?.id) && selected,
+                                        "bg-diamond-gradient": tab?.color==="indigo" && tab?.content?.includes(item?.id) && selected,
+                                        "bg-gold-gradient": tab?.color==="amber" && tab?.content?.includes(item?.id) && selected
+                                    })}
                             >
+                                {({ selected }) => (
                                 <div className="flex-row items-center gap-x-3">
                                     <span className={classNames({
                                         "cursor-pointer text-3xl font-rannaIcons": true,
                                         "text-gray-400": !tab?.content?.includes(item?.id),
-                                        "text-gray-600": tab?.color==="gray" && tab?.content?.includes(item?.id),
-                                        "text-indigo-500": tab?.color==="indigo" && tab?.content?.includes(item?.id),
-                                        "text-amber-500": tab?.color==="amber" && tab?.content?.includes(item?.id)
+                                        "text-gray-600": tab?.color==="gray" && tab?.content?.includes(item?.id) && !selected,
+                                        "text-indigo-500": tab?.color==="indigo" && tab?.content?.includes(item?.id) && !selected,
+                                        "text-amber-500": tab?.color==="amber" && tab?.content?.includes(item?.id) && !selected,
+                                        "text-white": tab?.content?.includes(item?.id) && selected
                                     })} width={"10"} height={"10"}>{item?.ico}</span>
                                     {t(item?.title)}
                                 </div>
+                                )}
                             </Tab>
                         ))}
-                    </TabsHeader>
-                    <TabsBody className={"w-full"}>
+                    </Tab.List>
+                    <Tab.Panels className={"w-full"}>
                         {categories && categories.map((item,key) => (
-                            <TabPanel key={key} value={item?.type}>
+                            <Tab.Panel key={key} value={item?.type} className={"w-full"}>
                                 <ItemsListView category={item} />
-                            </TabPanel>
+                            </Tab.Panel>
                         ))}
-                    </TabsBody>
-                </Tabs>}
+                    </Tab.Panels>
+                </Tab.Group>}
 
                 {/*{categories.map((item,key) => (*/}
                 {/*    <Button variant={"gradient"} color={*/}

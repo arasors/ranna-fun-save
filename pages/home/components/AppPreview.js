@@ -16,8 +16,8 @@ const AppPreview = () => {
             })}
         >
             <div className={classNames({
-                "container mx-auto": true,
-                "flex-row items-center": true
+                "container mx-auto md:px-0 px-4": true,
+                "md:flex-row items-center": true
 
             })}>
                 <div className={classNames({
@@ -27,18 +27,18 @@ const AppPreview = () => {
                 </div>
 
                 <div className={classNames({
-                    "py-4 flex-1 gap-y-12": true
+                    "py-4 flex-1 gap-y-12 md:px-1 px-4": true
                 })}>
                     <span className={"text-xl"}>{t("app-promotion-text")}</span>
 
 
                     <div className="flex-row gap-x-12">
                         <Button color={"white"} onClick={() => {}} className={"shadow-none p-0"}>
-                            <Image src={require("/public/google-play.png")} alt={"Download on Google Play"} className={"w-48 pointer-events-none select-none object-contain"} />
+                            <Image src={require("/public/google-play.png")} alt={"Download on Google Play"} className={"md:w-48 pointer-events-none select-none object-contain"} />
                         </Button>
 
                         <Button color={"white"} onClick={() => {}} className={"shadow-none p-0"}>
-                            <Image src={require("/public/app-store.png")} alt={"Download on App Store"} className={"w-48 pointer-events-none select-none object-contain"} />
+                            <Image src={require("/public/app-store.png")} alt={"Download on App Store"} className={"md:w-48 pointer-events-none select-none object-contain"} />
                         </Button>
 
                     </div>

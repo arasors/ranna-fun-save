@@ -89,8 +89,33 @@
     @apply rounded-full border-[0.043rem] border-dashed border-white;
 }
 /***/
+.scrollbar-st{
+    -webkit-overflow-scrolling: touch;
+}
+.scrollbar-st::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+    @apply bg-[#F9FAFB] dark:bg-[#111827];
+}
 
+.scrollbar-st::-webkit-scrollbar
+{
+    width: 2px;
+    height: 2px;
+    @apply dark:bg-[#111827] bg-[#eee];
+}
+.scrollbar-st.sc-hide::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+    @apply dark:bg-[#111827] bg-[#eee];
+}
 
+.scrollbar-st::-webkit-scrollbar-thumb
+{
+    @apply dark:bg-[#27313f] bg-[#eee];
+}
+/***/
 .nav-container {
     display: flex;
     justify-content: space-between;

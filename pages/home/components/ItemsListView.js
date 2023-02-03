@@ -14,7 +14,7 @@ const ItemsListView = ({category = {pageTitle: "", type: ""}}) => {
 
     return(
         <div className={classNames({
-            "mt-8 container mx-auto w-full max-w-screen-xl": true
+            "mt-8 container mx-auto w-full max-w-screen-lg px-4": true
         })}>
             <div className="flex-row justify-between items-center w-full">
                 <h3 className={classNames({
@@ -28,11 +28,11 @@ const ItemsListView = ({category = {pageTitle: "", type: ""}}) => {
 
             <div className="flex-row flex-wrap w-full gap-y-4">
                 {categoriesData && categoriesData?.filter(i => i?.type===category?.type)?.map((item,key) => (
-                    <div className={"basis-1/2 items-center"} key={key}>
+                    <div className={"md:basis-1/2 items-center"} key={key}>
                         <div className={classNames({
                             "w-full": true,
-                            "pr-8": key%2===0,
-                            "pl-8": key%2!==0
+                            "md:pr-8": key%2===0,
+                            "md:pl-8": key%2!==0
                         })}>
                             <div className={classNames({
                                 "flex-1 my-2 rounded-xl h-44 overflow-hidden": true,

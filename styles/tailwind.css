@@ -962,6 +962,11 @@ span,p,h3, div {
   margin-bottom: 0.5rem;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -1262,6 +1267,10 @@ span,p,h3, div {
 
 .w-0 {
   width: 0px;
+}
+
+.w-\[98\%\] {
+  width: 98%;
 }
 
 .min-w-\[25\%\] {
@@ -1570,6 +1579,11 @@ span,p,h3, div {
        column-gap: 0.25rem;
 }
 
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
 .gap-y-4 {
   row-gap: 1rem;
 }
@@ -1579,9 +1593,12 @@ span,p,h3, div {
        column-gap: 0px;
 }
 
-.gap-x-3 {
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .overflow-auto {
@@ -1590,6 +1607,10 @@ span,p,h3, div {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .whitespace-normal {
@@ -1956,6 +1977,18 @@ span,p,h3, div {
 
 .bg-enthusiastic-joyful {
   background-image: url(../public/images/home/enthusiastic-joyful.png);
+}
+
+.bg-silver-gradient {
+  background-image: linear-gradient(to top right, #4b5563, #9ca3af) ;
+}
+
+.bg-diamond-gradient {
+  background-image: linear-gradient(0deg, #5962E4, #5962E4);
+}
+
+.bg-gold-gradient {
+  background-image: linear-gradient(270deg, #935800 -0.09%, #FFD852 99.91%);
 }
 
 .bg-pr-pattern2 {
@@ -2343,6 +2376,14 @@ span,p,h3, div {
   padding-bottom: 0.75rem;
 }
 
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2484,6 +2525,10 @@ span,p,h3, div {
   line-height: 4.875;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .tracking-normal {
   letter-spacing: 0em;
 }
@@ -2590,14 +2635,14 @@ span,p,h3, div {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .antialiased {
@@ -4625,8 +4670,28 @@ span,p,h3, div {
     height: 42.25rem;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
   .md\:max-w-screen-md {
     max-width: 768px;
+  }
+
+  .md\:basis-1\/2 {
+    flex-basis: 50%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:justify-between {
@@ -4646,6 +4711,38 @@ span,p,h3, div {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .md\:pr-8 {
+    padding-right: 2rem;
+  }
+
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-2xl {
@@ -4677,6 +4774,60 @@ span,p,h3, div {
   border-style: dashed;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+/***/
+
+.scrollbar-st{
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-st::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.dark .scrollbar-st::-webkit-scrollbar-track {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.scrollbar-st::-webkit-scrollbar
+{
+  width: 2px;
+  height: 2px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+}
+
+.dark .scrollbar-st::-webkit-scrollbar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.scrollbar-st.sc-hide::-webkit-scrollbar
+{
+  width: 0px;
+  height: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+}
+
+.dark .scrollbar-st.sc-hide::-webkit-scrollbar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.scrollbar-st::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+}
+
+.dark .scrollbar-st::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 49 63 / var(--tw-bg-opacity));
 }
 
 /***/

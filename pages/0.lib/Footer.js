@@ -23,10 +23,11 @@ const Footer = () => {
                 "container mx-auto": true
             })}>
                 <div className={classNames({
-                    "flex-row w-full justify-between": true
+                    "md:flex-row w-full justify-between": true
                 })}>
                     <div className={classNames({
-                        "flex-1 flex-row gap-x-12": true
+                        "flex-1 md:flex-row gap-x-12 gap-y-4": true,
+                        "md:px-0 px-4 md:py-0 py-8 w-full": true
                     })}>
                         {footer && footer?.map((item,key) => (
                             <Link href={item?.href} key={key}>
@@ -34,7 +35,7 @@ const Footer = () => {
                             </Link>
                         ))}
                     </div>
-                    <div>
+                    <div className={"items-center md:w-auto w-full md:pt-0 pt-4 md:px-0 px-3"}>
                         <Select
                             label={t("site-language")}
                             value={site?.language}
@@ -51,7 +52,7 @@ const Footer = () => {
                 </div>
 
                 <div className={classNames({
-                    "flex-row w-full justify-between items-center pt-2": true
+                    "md:flex-row w-full justify-between items-center pt-2": true
                 })}>
 
                     <span>{t("copyright-text")} © {dayjs(new Date()).format("YYYY")}</span>
