@@ -164,6 +164,7 @@ module.exports = withMT({
       "silver-gradient": "linear-gradient(270deg, #676767 -0.09%, #9F9F9F 6.16%, #AFAFAF 99.91%) ",
       "istanbul-mosque": "url(../public/images/home/istanbul-s-ocean-with-cruise-ship-1.png)",
       "pr-pattern": "url(../public/images/home/pr-pattern.png)",
+      "pr-pattern2": "url(../public/images/home/pr-pattern-2.png)",
       "enthusiastic-joyful": "url(../public/images/home/enthusiastic-joyful.png)",
       "card1-bg": "url(../public/images/home/card1-bg.png)"
     },

@@ -23,7 +23,9 @@ export const resources = {
             "gold-member": "Altın Üye",
             "gold-expired-time-text": "3 Ay Limitli",
             "silver-member": "Gümüş Üye",
-            "silver-expired-time-text": "3 Ay Limitli"
+            "silver-expired-time-text": "3 Ay Limitli",
+            "how-does-it-work-summary-title": "Nasıl çalışır?",
+            "how-does-it-work-summary-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
         }
     },
     en: {
@@ -50,7 +52,9 @@ export const resources = {
             "gold-member": "Gold Member",
             "gold-expired-time-text": "3 Months Limited",
             "silver-member": "Silver Member",
-            "silver-expired-time-text": "3 Months Limited"
+            "silver-expired-time-text": "3 Months Limited",
+            "how-does-it-work-summary-title": "How Does it Work?",
+            "how-does-it-work-summary-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
         }
     }
 }
