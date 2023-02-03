@@ -32,13 +32,13 @@ const AppPreview = () => {
                     <span className={"text-xl"}>{t("app-promotion-text")}</span>
 
 
-                    <div className="flex-row gap-x-6">
+                    <div className="flex-row gap-x-12">
                         <Button color={"white"} onClick={() => {}} className={"shadow-none p-0"}>
-                            <Image src={require("/public/google-play.png")} alt={"Download on Google Play"} className={"w-44 pointer-events-none select-none object-contain"} />
+                            <Image src={require("/public/google-play.png")} alt={"Download on Google Play"} className={"w-48 pointer-events-none select-none object-contain"} />
                         </Button>
 
                         <Button color={"white"} onClick={() => {}} className={"shadow-none p-0"}>
-                            <Image src={require("/public/app-store.png")} alt={"Download on App Store"} className={"w-44 pointer-events-none select-none object-contain"} />
+                            <Image src={require("/public/app-store.png")} alt={"Download on App Store"} className={"w-48 pointer-events-none select-none object-contain"} />
                         </Button>
 
                     </div>

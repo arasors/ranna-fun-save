@@ -26,7 +26,9 @@ export const resources = {
             "silver-expired-time-text": "3 Ay Limitli",
             "how-does-it-work-summary-title": "Nasıl çalışır?",
             "how-does-it-work-summary-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-            "app-promotion-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+            "app-promotion-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "copyright-text": "Tüm hakları saklıdır",
+            "site-language": "Dil"
         }
     },
     en: {
@@ -37,8 +39,8 @@ export const resources = {
             "login": "Login",
             "buynow": "Buy Now!",
             "settings": "Settings",
-            "about-us": "About us",
-            "terms-of-use": "Terms of use",
+            "about-us": "About Us",
+            "terms-of-use": "Terms of Use",
             "privacy-policy": "Privacy Policy",
             "contact": "Contact",
             "become-partner": "Become a partner",
@@ -56,7 +58,9 @@ export const resources = {
             "silver-expired-time-text": "3 Months Limited",
             "how-does-it-work-summary-title": "How Does it Work?",
             "how-does-it-work-summary-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-            "app-promotion-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+            "app-promotion-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+            "copyright-text": "All rights reserved",
+            "site-language": "Language"
         }
     }
 }

@@ -57,7 +57,7 @@ const Page = ({children }) => {
             <ThemeProvider value={site?.theme || "light"}>
                 <Header />
                 {!loaded && <Loader /> || children}
-                {/*<Footer />*/}
+                {checkFooterVisible && <Footer />}
             </ThemeProvider>
         </React.Fragment>
     )

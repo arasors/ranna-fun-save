@@ -1,8 +1,13 @@
 import React, {memo} from "react";
 import {updateSite} from "0.lib/context/actions/siteAction";
-import {Button} from "@material-tailwind/react";
+import {Button, IconButton, Select, Option} from "@material-tailwind/react";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
+import classNames from "classnames";
+import Link from "next/link";
+import {footer} from "0.lib/data/footer";
+import dayjs from "dayjs";
+import {ReactSVG} from "react-svg";
 
 const Footer = () => {
 
@@ -10,12 +15,74 @@ const Footer = () => {
     const {t} = useTranslation();
 
     return(
-        <footer>
-            <Button variant={"gradient"} onClick={() => updateSite({language: site?.language==="tr-TR" ? "en-US" : "tr-TR"})}>
-                <span>
-                    {t("lng")}: {site?.language}
-                </span>
-            </Button>
+        <footer className={classNames({
+            "border-t border-solid border-gray-300": true,
+            "py-4 w-full": true
+        })}>
+            <div className={classNames({
+                "container mx-auto": true
+            })}>
+                <div className={classNames({
+                    "flex-row w-full justify-between": true
+                })}>
+                    <div className={classNames({
+                        "flex-1 flex-row gap-x-8": true
+                    })}>
+                        {footer && footer?.map((item,key) => (
+                            <Link href={item?.href} key={key}>
+                                {t(item?.title)}
+                            </Link>
+                        ))}
+                    </div>
+                    <div>
+                        <Select
+                            label={t("site-language")}
+                            value={site?.language}
+                            animate={{
+                                mount: { y: 0 },
+                                unmount: { y: 25 },
+                            }}
+                            onChange={(v) => updateSite({language: v})}
+                        >
+                            <Option value={"tr-TR"}>Türkçe</Option>
+                            <Option value={"en-US"}>English</Option>
+                        </Select>
+                    </div>
+                </div>
+
+                <div className={classNames({
+                    "flex-row w-full justify-between items-center pt-2": true
+                })}>
+
+                    <span>{t("copyright-text")} © {dayjs(new Date()).format("YYYY")}</span>
+
+
+                    <div className={classNames({
+                        "flex-row gap-x-4": true
+                    })}>
+
+                        <IconButton color="white" className={"shadow-none p-0 text-primary text-base cursor-pointer"} onClick={() => {}}>
+                            <ReactSVG src={"icons/youtube.svg"} />
+                        </IconButton>
+
+                        <IconButton color="white" className={"shadow-none p-0 text-primary text-base cursor-pointer"} onClick={() => {}}>
+                            <ReactSVG src={"icons/instagram.svg"} />
+                        </IconButton>
+
+                        <IconButton color="white" className={"shadow-none p-0 text-primary text-base cursor-pointer"} onClick={() => {}}>
+                            <ReactSVG src={"icons/twitter.svg"} />
+                        </IconButton>
+
+                        <IconButton color="white" className={"shadow-none p-0 text-primary text-base cursor-pointer"} onClick={() => {}}>
+                            <ReactSVG src={"icons/facebook.svg"} />
+                        </IconButton>
+
+                    </div>
+
+                </div>
+
+
+            </div>
         </footer>
     )
 };
