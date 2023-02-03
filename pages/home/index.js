@@ -14,7 +14,7 @@ const Home = () => {
             <Slider />
             <CategoriesTab />
             <CardsBanner />
-            <div className="max-w-screen-lg container mx-auto">
+            <div className=" container mx-auto">
                 <ItemsListView category={{pageTitle: "Tourist Attractions", type: "attractions"}} />
             </div>
             <HowWork />

@@ -14,7 +14,7 @@ const ItemsListView = ({category = {pageTitle: "", type: ""}}) => {
 
     return(
         <div className={classNames({
-            "mt-8 container mx-auto w-full max-w-screen-lg px-4": true
+            "mt-8 container mx-auto w-full px-4": true
         })}>
             <div className="flex-row justify-between items-center w-full">
                 <h3 className={classNames({

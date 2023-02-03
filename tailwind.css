@@ -234,8 +234,8 @@
 .card,
 .card__chip-texture,
 .card__texture {
-    animation-duration: 3s;
-    animation-timing-function: ease-ın-out;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -245,39 +245,37 @@
 }
 .card.diamond{
     --hue: 223;
-    background-color: hsl(var(--hue),90%,55%);
-    box-shadow:
-            0 0 0 hsl(0,0%,80%),
-            0 0 0 hsl(0,0%,100%),
-            -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
+    /*background-color: hsl(var(--hue),90%,55%);*/
+
+    @apply bg-gradient-to-r from-[#0753C3] to-[#9694FF];
 }
 .card.gold{
     --hue: 35;
-    background-color: hsl(var(--hue),76%,53%);
+    /*background-color: hsl(var(--hue),76%,53%);*/
     box-shadow:
             0 0 0 hsl(0,0%,0%),
             0 0 0 hsl(0,0%,0%),
             -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
+    @apply bg-gradient-to-r to-[#935800] from-[#FFD852];
 }
 .card.silver{
     --hue: 0;
-    background-color: hsl(var(--hue),0%,40%);
+    /*background-color: hsl(var(--hue),0%,40%);*/
     box-shadow:
             0 0 0 hsl(0,0%,0%),
             0 0 0 hsl(0,0%,0%),
             -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
+    @apply bg-silver-gradient;
 }
 .card {
-    animation-name: rotate;
-    background-image:
-            radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 29.5%,hsla(0,0%,100%,0) 30%),
-            radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 39.5%,hsla(0,0%,100%,0) 40%),
-            radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 49.5%,hsla(0,0%,100%,0) 50%);
+    /*background-image:*/
+    /*        radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 29.5%,hsla(0,0%,100%,0) 30%),*/
+    /*        radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 39.5%,hsla(0,0%,100%,0) 40%),*/
+    /*        radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 49.5%,hsla(0,0%,100%,0) 50%);*/
     border-radius: 0.5em;
     color: hsl(0,0%,100%);
-    width: 10.3em;
-    height: 6.8em;
-    transform: translate3d(0,0,0);
+    width: 16.2rem;
+    height: 10.5rem;
     display: block;
     @apply font-sans;
 }
@@ -290,38 +288,36 @@
 }
 .card__chip-texture,
 .card__texture{
-    animation-name: texture;
+    /*animation-name: texture;*/
     top: 0;
     left: 0;
     width: 200%;
     height: 100%;
 }
 .card__texture2 {
-    animation-name: texture;
+    /*animation-name: texture;*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 .card__info {
-    font: 0.75em/1 "dm sans", sans-serif;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     flex-wrap: wrap;
-    padding: 0.75rem;
     inset: 0;
+    @apply p-2;
 }
 .card__logo,
 .card__number {
-    width: 100%;
-    @apply z-10;
+    @apply z-10 w-full pt-1 pl-2;
 }
 .card__logo {
     @apply flex-row justify-between;
 }
 .card__logo span{
-    @apply md:text-lg text-sm whitespace-nowrap;
+    @apply md:text-xs text-sm whitespace-nowrap;
 }
 .card__chip {
     background-image: linear-gradient(hsl(0,0%,70%),hsl(0,0%,80%));
@@ -339,10 +335,10 @@
     background-image: linear-gradient(-80deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0.6) 48% 52%,hsla(0,0%,100%,0));
 }
 .card__type {
-    width: calc(7.5em/2);
-    height: calc(7.5em/2);
+    width: calc(14rem/2);
+    height: calc(14rem/2);
     @apply rounded-full bg-white/20;
-    @apply absolute right-1 top-1/2 -translate-y-1/2 translate-x-1/2 z-10;
+    @apply absolute md:right-0 right-1 top-1/2 -translate-y-1/2 translate-x-1/2 z-10;
 }
 .circle_card__type{
     font-family: 'ranna categories ico';
@@ -352,7 +348,7 @@
     @apply scale-75 h-full items-center justify-center translate-x-5;
 }
 .circle_card__type .text-wrapper span{
-    @apply md:leading-10 md:text-3xl leading-6 text-xl;
+    @apply md:leading-8 md:text-2xl leading-8 text-2xl translate-x-2;
 }
 
 
@@ -363,17 +359,17 @@
     /*background: linear-gradient(hsl(0,0%,100%),hsl(0,0%,85%) 15% 55%,hsl(0,0%,70%) 70%);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    @apply md:text-2xl text-base font-bold z-10;
+    @apply md:text-xs text-base font-bold z-10;
     /*font-family: "courier prime", monospace;*/
     /*filter: drop-shadow(0 0.05rem hsla(0,0%,0%,0.3));*/
 }
 .card__number {
-    @apply flex-row gap-x-2;
+    @apply flex-row gap-x-2 pl-4 pb-2;
 }
 .card__valid-thru,
 .card__name {
-    text-transform: uppercase;
+    @apply flex flex-row items-center;
+    @apply pl-4 uppercase flex-1 !font-extrabold;
 }
 .card__valid-thru,
 .card__exp-date {
@@ -387,8 +383,9 @@
 }
 .card__exp-date,
 .card__name {
-    @apply md:text-3xl text-xl z-10 font-sans;
+    @apply md:text-base text-xl z-10 ;
 }
+
 .card__exp-date {
     padding-left: 0.25rem;
 }
@@ -439,7 +436,8 @@
 }
 .card__texture2 {
     animation-name: texture;
-    @apply bg-card1-bg bg-cover z-0;
+    @apply bg-card1-bg bg-cover z-0 opacity-60;
+    mix-blend-mode: overlay;
 }
 /* dark theme */
 

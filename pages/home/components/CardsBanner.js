@@ -14,18 +14,18 @@ const CardsBanner = () => {
             "bg-pr-pattern relative overflow-hidden": true
         })}>
             <div className={classNames({
-                "absolute top-12 left-1/2 h-full w-[48%] md:block hidden": true,
+                "absolute top-12 left-1/2 h-full w-[40%] md:block hidden": true,
                 "bg-enthusiastic-joyful bg-right bg-contain bg-no-repeat": true
             })}></div>
             <div className="container mx-auto py-8 w-full text-white md:flex-row">
-                <div className={"flex-1"}>
-                    <h3 className={"text-3xl font-bold mt-14 pt-14"}>{t("credit-card-banner-title")}</h3>
-                    <p className="py-8">{t("credit-card-banner-text")}</p>
+                <div className={"flex-1 basis-1/3"}>
+                    <h3 className={"text-3xl font-bold md:mt-14 md:pt-14"}>{t("credit-card-banner-title")}</h3>
+                    <p className="py-8 text-xl">{t("credit-card-banner-text")}</p>
 
 
 
 
-                    <div className={"md:flex-row gap-2 items-center justify-center w-full"}>
+                    <div className={"md:flex-row gap-8 items-center md:justify-start justify-center w-full"}>
 
                         {[
                             {

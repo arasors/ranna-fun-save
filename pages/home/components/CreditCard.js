@@ -10,9 +10,9 @@ const CreditCard = ({item}) => {
         <div className={`card ${item?.type}`}>
             <div className="card__info">
                 <div className="card__logo">
-                    <Image src={require("/public/logo-white.svg")} alt={t("title")} className={"w-32"} />
-                    <div className={"flex-row gap-x-1 items-center pr-3"}>
-                        <div className="h-10 w-0.5 rounded mx-2 bg-white"></div>
+                    <Image src={require("/public/logo-white.svg")} alt={t("title")} className={"w-20"} />
+                    <div className={"flex-row items-center pr-3"}>
+                        <div className="h-6 w-[1px] rounded mx-2 bg-white"></div>
                         <span>{t(`${item?.type}-expired-time-text`)}</span>
                     </div>
                 </div>
