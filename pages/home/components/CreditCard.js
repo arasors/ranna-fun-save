@@ -51,7 +51,7 @@ const CreditCard = ({item}) => {
                     {/*<Image src={require("/public/icons/basket.svg")?.default} alt={"Basket"} />*/}
                     {/*<Image src={require("/public/icons/health.svg")?.default} alt={"Health"} />*/}
 
-                    <div className="text-wrapper">
+                    <div className="text-wrapper select-none">
                         <span>A</span>
                         <span>B</span>
                         {(item?.type==="gold" || item?.type==="diamond") && (
