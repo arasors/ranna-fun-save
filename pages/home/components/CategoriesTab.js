@@ -58,7 +58,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
     return(
         <React.Fragment>
             <div className={classNames({
-                "flex-row md:gap-x-4 gap-x-1 justify-center container mx-auto": true,
+                "flex-row md:gap-x-4 gap-x-1 justify-center container max-w-screen-md mx-auto": true,
                 "-translate-y-1/2 -mt-1/2": true
             })}>
 
@@ -68,7 +68,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
                         color={item==="silver" ? "gray" : item==="gold" ? "amber" : "indigo"}
                         className={classNames(({
                             "flex flex-col": true,
-                            "md:py-8 py-1 md:px-20 px-4 rounded-xl text-white font-medium": true,
+                            "md:py-8 py-1 flex-1 rounded-xl text-white font-medium": true,
                             "transition-all ease-in-out": true,
                             "scale-90 opacity-90": tab!==key,
                             "scale-105": tab===key
@@ -78,7 +78,7 @@ const CategoriesTab = ({category, tab, tabOnChange = () => {}, categoryOnChange 
                     }
                     }>
                         <span className={"text-xl md:text-2xl cursor-pointer"}>{item?.toUpperCase()}</span>
-                        <span className={"pb-4 normal-case cursor-pointer"}>{t("membership")}</span>
+                        <span className={"pb-4 capitalize text-base cursor-pointer"}>{t("membership")}</span>
                     </Button>
                 ))}
 

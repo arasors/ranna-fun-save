@@ -1,18 +1,13 @@
 import React, {memo, useState, useCallback, useMemo, useEffect} from "react";
 import {useTranslation} from "react-i18next";
-import {Button, IconButton, Typography} from "@material-tailwind/react";
 import {useSelector} from "react-redux";
-import classNames from "classnames";
-import {ReactSVG} from "react-svg";
-import Image from "next/image";
-import Link from "next/link";
-import {FaAngleRight, TfiAngleRight} from "react-icons/all";
 import CardsBanner from "home/components/CardsBanner";
 import ItemsListView from "home/components/ItemsListView";
 import CategoriesTab from "home/components/CategoriesTab";
 import Slider from "home/components/Slider";
 import {categories, categoriesData} from "0.lib/data/categories";
 import HowWork from "home/components/HowWork";
+import AppPreview from "home/components/AppPreview";
 
 const Home = () => {
 
@@ -35,6 +30,8 @@ const Home = () => {
             <CardsBanner />
             <ItemsListView category={{pageTitle: "Tourist Attractions", type: "attractions"}} />
             <HowWork />
+            <AppPreview />
+
         </div>
     )
 }
